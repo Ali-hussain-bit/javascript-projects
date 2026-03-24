@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+
+<body>
+    <div class="data">
+        <h1>todo app</h1>
+
+        <input id="myinput" type="text" placeholder="EnTER DATA" />
+        <button onclick="todoapp.additem()" class="btn">add</button>
+        <ul id="list"></ul>
+
+        <button id="clear" onclick="todoapp.clear() ">Clear all</button>
+    </div>
+    <script>
+        let input = document.getElementById("myinput")
+        let todolist = document.querySelector("#list")
+        let list = []
+        // let color = document.createElement(["green" , "red"])
+        let todoapp = {
+            
+            additem() {
+                if (input.value) {
+                    list.push(input.value );
+                     
+                    input.value = ""
+
+                  
+                }
+              
+
+                this.myfun();
+
+
+            }
+            ,
+            myfun() {
+                todolist.innerHTML = "";
+                list.forEach((value, index) => {
+
+                    todolist.innerHTML +=`<del>`
+                    todolist.innerHTML += `<li class= "mylist">${value}
+                    <button id = "x-btn" onclick="todoapp.delete(${index})">x</button><input type="checkbox" id="option1" name="options" value="option1"></li>`
+                })
+            },
+            delete(index) {
+                list.splice(index, 1);
+                this.myfun();
+
+            },
+            clear() {
+                list.splice(0, list.length)
+                this.myfun();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

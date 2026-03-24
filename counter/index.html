@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="display: flex; align-items: center; height: 80vh; justify-content: center;">
+    <div style="display: flex; justify-content: center; gap: 20px;">
+        <button id="minus" style="border-radius:20px;padding: 20px;" onclick="sub()">-</button>
+        <div id="screen" style="padding: 20px 60px;background-color: rgba(0, 0, 0, 0.822); color: white; display: flex; align-items: center; justify-content: center;"> 2 </div>
+            <button id="plus" style="border-radius:20px;padding: 20px;" onclick="add()" >+</button>
+
+       
+
+    </div>
+    <script>
+        let count = 0
+        let  screen = document.getElementById("screen")
+        // screen.innerText = count
+        let minus = document.getElementById("minus")
+        let plus = document.getElementById("plus")
+       let add = function () {
+          count++;
+          screen.innerText = count
+       }
+       let sub =  function () {
+        if (count > 0) {
+            count--;
+        screen.innerText = count 
+            
+        }
+       
+       }
+            
+            
+        
+     
+
+    </script>
+</body>
+
+</html>
