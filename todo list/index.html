@@ -77,14 +77,26 @@
 
 
 //6
+// function addtask() {
+//     let input = document.getElementById("taskbar")
+//     let value = input.value
+//     let li = document.createElement("li")
+//     li.innerHTML = input.value
+//     document.getElementById("list").appendChild(li)
+//     value = ""
+// }
 function addtask() {
     let input = document.getElementById("taskbar")
-    let value = input.value
+    let value= input.value
     let li = document.createElement("li")
     li.innerHTML = input.value
     document.getElementById("list").appendChild(li)
-    value = ""
+     input.value = ""
+    if (taskbar === "") {
+      
+    }
 }
+
     </script>
 </body>
 </html>
