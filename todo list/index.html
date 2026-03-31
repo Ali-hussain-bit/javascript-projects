@@ -9,6 +9,7 @@
     <input type="text" id="taskbar" placeholder="add">
     <button onclick="addtask()">Add</button>
       <ol type="a" id="list"> </ol>
+      <button id="buttons" onclick="del()">delete</button>
     <script>
 
         //1
@@ -86,16 +87,23 @@
 //     value = ""
 // }
 function addtask() {
+    
     let input = document.getElementById("taskbar")
     let value= input.value
+      if ( value === "") {
+      return;
+    }
+
     let li = document.createElement("li")
     li.innerHTML = input.value
     document.getElementById("list").appendChild(li)
      input.value = ""
-    if (taskbar === "") {
-      return;
+      
     }
-}
+    function del() {
+      
+
+    }
 
     </script>
 </body>
