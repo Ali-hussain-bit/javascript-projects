@@ -24,7 +24,7 @@
 //      let li = document.createElement("li");
 //      li.innerText =  taskvaluse;
 //      document.getElementById("list").appendChild(li);
-//      Inputvalue.value = "";
+//      Inputvalue.value = ""
 //   }
 
 
@@ -34,12 +34,7 @@
 
 
 // function addtask() {
-//     let Inputvalue = document.getElementById("taskbar")
-//     let task = Inputvalue.value;
-//    let li = document.createElement("li")
-//    li.innerText = task
-//     document.getElementById("list").appendChild(li);
-//     Inputvalue.value = ""
+//     let Inputvalue = d
 
 // }
 
@@ -86,25 +81,43 @@
 //     document.getElementById("list").appendChild(li)
 //     value = ""
 // }
-function addtask() {
+// function addtask() {
     
-    let input = document.getElementById("taskbar")
-    let value= input.value
-      if ( value === "") {
-      return;
-    }
+//     let input = document.getElementById("taskbar")
+//     let value= input.value
+//       if ( value === "") {
+//       return;
+//     }
 
-    let li = document.createElement("li")
-    li.innerHTML = input.value
-    document.getElementById("list").appendChild(li)
-     input.value = ""
+//     let li = document.createElement("li")
+//     li.innerHTML = input.value
+//     document.getElementById("list").appendChild(li)
+//      input.value = ""
       
-    }
-    function del() {
+//     }
+//     function del() {
       
 
-    }
+//     }
+
+function addtask() {
+  let input =  document.getElementById("taskbar")
+  let inputvalue = input.value
+  if (input.value === "") {
+    return
+  }
+  let li = document.createElement("li")
+  li.innerHTML = input.value
+  document.getElementById("list").appendChild(li)
+  input.value = ""
+function del() {
+
+  
+}
+}
+
+
 
     </script>
-</body>
+</body
 </html>
