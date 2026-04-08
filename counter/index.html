@@ -36,8 +36,23 @@
     //    }
    let count = 0;
    let  screen  = document.getElementById("screen")
-   let minus = document.
-            
+   let minus = document.getElementById("minus")
+   let plus =  document.getElementById("plus")
+    // screen.innertext = count;
+   function add() {
+    count++;
+screen.innerText = count;
+    
+   }
+   function sub() {
+    if (count > 0) {
+        count--;
+        screen.innerText = count;
+    }
+      
+   }
+
+   
             
         
      

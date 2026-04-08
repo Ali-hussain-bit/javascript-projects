@@ -6,26 +6,31 @@
     <title>Document</title>
 </head>
 <body>
+  <h1>TODO App</h1>
     <input type="text" id="taskbar" placeholder="add">
     <button onclick="addtask()">Add</button>
-      <ol type="a" id="list"> </ol>
-      <button id="buttons" onclick="del()">delete</button>
+
+      <ul id="list">
+
+      </ul>
+      <!-- <button id="buttons" onclick="del()">delete</button> -->
     <script>
 
-        //1
+    function addtask() {
+        let Inputvalue = document.getElementById("taskbar");
+        let list = document.getElementById("list")
+        let taskvaluse =  Inputvalue.value;
 
+        if (Inputvalue.value == "") {
+          alert("Please enter a Value");
+        } else {
+          let li = document.createElement("li");
+          li.innerText =  taskvaluse;
+          list.appendChild(li);
+          Inputvalue.value = ""
+        }
 
-
-//         function addtask() {
-            
-      
-//     let Inputvalue = document.getElementById("taskbar");
-//     let taskvaluse =  Inputvalue.value;
-//      let li = document.createElement("li");
-//      li.innerText =  taskvaluse;
-//      document.getElementById("list").appendChild(li);
-//      Inputvalue.value = ""
-//   }
+    }
 
 
 
@@ -100,21 +105,21 @@
 
 //     }
 
-function addtask() {
-  let input =  document.getElementById("taskbar")
-  let inputvalue = input.value
-  if (input.value === "") {
-    return
-  }
-  let li = document.createElement("li")
-  li.innerHTML = input.value
-  document.getElementById("list").appendChild(li)
-  input.value = ""
-function del() {
+// function addtask() {
+//   let input =  document.getElementById("taskbar")
+//   let inputvalue = input.value
+//   if (input.value === "") {
+//     return
+//   }
+//   let li = document.createElement("li")
+//   li.innerHTML = input.value
+//   document.getElementById("list").appendChild(li)
+//   input.value = ""
+// function del() {
 
   
-}
-}
+// }
+// }
 
 
 
